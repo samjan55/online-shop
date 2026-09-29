@@ -32,12 +32,27 @@
         .title-font {
             font-family: "Playfair Display", serif;
         }
+        body {
+            background:
+                radial-gradient(circle at 10% 5%, rgba(59,130,246,.30), transparent 38%),
+                radial-gradient(circle at 92% 45%, rgba(129,140,248,.28), transparent 40%),
+                radial-gradient(circle at 15% 95%, rgba(56,189,248,.28), transparent 40%),
+                linear-gradient(180deg, #e6f0ff 0%, #f7faff 50%, #e3ecff 100%);
+        }
+        .spark {
+            position: absolute;
+            background: #bfdbfe;
+            opacity: .85;
+            clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+        }
     </style>
-</head>
 
-<body class="min-h-screen bg-blue-50">
-
-    <main class="min-h-screen px-5 py-10">
+<body class="min-h-screen relative overflow-x-hidden">
+<div class="spark" style="top: 60px; left: 20px; width: 70px; height: 70px;"></div>
+<div class="spark" style="bottom: 90px; right: 20px; width: 90px; height: 90px;"></div>
+  
+    <main class="relative min-h-screen px-5 py-10">
+        
 
         <!-- Header -->
         <section class="text-center pt-10">
